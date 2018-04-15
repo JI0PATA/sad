@@ -29,3 +29,8 @@
 	width: 100%;
 	margin-bottom: 30px;
 }
+
+.news__title {
+	font-size: 22px;
+	font-weight: bold;
+}

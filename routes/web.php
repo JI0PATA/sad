@@ -50,6 +50,11 @@ Route::prefix('admin')->middleware('AdminPanel')->group(function() {
 
         Route::get('add', 'NewsController@add')->name('addNews');
         Route::post('create', 'NewsController@create')->name('createNews');
+
+        Route::get('edit/{id}', 'NewsController@edit')->name('editNews');
+        Route::post('update/{id}', 'NewsController@update')->name('updateNews');
+
+        Route::get('delete/{id}', 'NewsController@delete')->name('deleteNews');
     });
 
 });
