@@ -1,0 +1,383 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+*:active, *:focus {
+	outline: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+section {
+	margin-top: 30px;
+}
+
+:root {
+	--blue: #0096FC;
+	--blue-darken: #0054a8;
+	--light-blue: #BAEFFC;
+	--red: #FF7E64;
+	--yellow: #FFD25D;
+}
+
+.no-transition * {
+	transition: none;
+}
+
+/************* ОБЩИЕ СТИЛИ *************/
+.wp {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.title {
+	text-transform: uppercase;
+	color: var(--blue);
+}
+
+.hor-center {
+	text-align: center;
+}
+
+/************* /ОБЩИЕ СТИЛИ ************/
+
+/************* ШАПКА *************/
+#hat {
+	width: 100%;
+	height: 700px;
+	background-image: url('../img/bg_home.png');
+	background-size: cover;
+}
+
+#menu {
+	padding: 30px 30px 15px;
+	background: #fff;
+	color: var(--blue);
+	display: flex;
+	list-style: none;
+	justify-content: space-around;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+.menu__item {
+	cursor: pointer;
+	transition: color .4s;
+}
+
+.menu__item:hover {
+	color: var(--blue-darken);
+}
+
+.hat__item {
+	display: flex;
+	justify-content: space-between;
+	padding: 15px;
+	background: #fff;
+	border-radius: 20px;
+	margin-top: 40px;
+}
+
+#slider {
+	width: 800px;
+	height: 500px;
+}
+
+.slick-list, .slidet__item, .slick-track {
+	width: 100%;
+	height: 100%;
+}
+
+.slider__item {
+	background-size: cover;
+	background-position: center center;
+}
+
+/************* ФОРМА ОБРАТНОЙ СВЯЗИ *************/
+#callback-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.form__group {
+	width: 100%;
+}
+
+.form__group input, .form__group textarea {
+	width: 100%;
+	background: var(--light-blue);
+	border-radius: 10px;
+	border: transparent;
+	font-size: 20px;
+	padding: 10px;
+}
+
+.form__group textarea {
+	height: 100px;
+}
+
+.field-title {
+	color: var(--blue);
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+button {
+	text-transform: uppercase;
+	background: var(--light-blue);
+	color: var(--blue);
+	display: inline-block;
+	padding: 10px 25px;
+	font-size: 20px;
+	border: transparent;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: background .4s;
+}
+
+button:hover {
+	background: var(--blue-darken);
+}
+
+/************* /ФОРМА ОБРАТНОЙ СВЯЗИ ************/
+
+/************* /ШАПКА ************/
+
+/************* ВСЯКИЙ ХЛАМ *************/
+#stuff {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+#stuff .half_item {
+	width: 45%;
+	margin-bottom: 40px;
+}
+
+.top {
+	position: relative;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.top .line {
+	width: 100%;
+	height: 4px;
+	background: var(--red);
+	border-radius: 5px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	z-index: 2;
+}
+
+.top .circle {
+	padding: 20px;
+	background-color: var(--red);
+	border-radius: 50%;
+	border: 5px solid #fff;
+	display: inline-block;
+	position: relative;
+	z-index: 3;
+}
+
+.top .circle img {
+	width: 50px;
+}
+
+.top.yellow .line, .top.yellow .circle {
+	background: var(--yellow);
+}
+
+#stuff .text {
+	font-size: 18px;
+	text-align: center;
+}
+
+/************* /ВСЯКИЙ ХЛАМ ************/
+
+/************* НАСТАВНИКИ *************/
+#mentors {
+	width: 100%;
+	min-height: 500px;
+	background-image: url('../img/bg_clouds_light.png');
+	background-size: 100% 100%;
+	padding: 40px;
+}
+
+#mentors .title {
+	font-size: 30px;
+}
+
+.list__items {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+
+.list__item {
+	width: 26%;
+	min-height: 200px;
+	padding: 10px 20px;
+	background: #fff;
+	border-radius: 20px;
+	margin-bottom: 30px;
+}
+
+.item__photo {
+	width: 100%;
+}
+
+.item__photo img {
+	width: 100%;
+}
+
+.item__info {
+	margin-top: 15px;
+	font-size: 19px;
+	text-align: center;
+}
+
+/************* /НАСТАВНИКИ ************/
+
+/************* АЛЬБОМЫ *************/
+.albums__items {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 30px;
+}
+
+.albums__item {
+	width: 30%;
+}
+
+.album__title {
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.album__preview img {
+	width: 100%;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+/************* /АЛЬБОМЫ ************/
+
+/************* ОТЗЫВЫ *************/
+.callback__items {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.callback__item {
+	width: 40%;
+	text-align: center;
+}
+
+.callback__name {
+	padding: 5px 20px;
+	background: var(--yellow);
+	font-size: 25px;
+	text-transform: uppercase;
+	display: inline-block;
+	color: #fff;
+	margin-bottom: 15px;
+}
+
+.callback__comment {
+	font-size: 20px;
+}
+
+/************* /ОТЗЫВЫ ************/
+
+/************* КОНТАКТЫ *************/
+#contacts {
+	width: 100%;
+	min-height: 400px;
+	background-image: url('../img/bg_clouds.png');
+	background-size: 100% 100%;
+	padding: 40px;
+	position: relative;
+	z-index: 3;
+}
+
+#contacts .wp > div {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 10px;
+	color: #fff;
+}
+
+#contacts .title {
+	color: #fff;
+}
+
+#contacts .mail_icon img {
+	width: 40px;
+}
+
+.contacts__item {
+	width: 30%;
+}
+
+.contacts__callback {
+	width: 60%;
+}
+
+.contacts__form {
+	display: flex;
+	justify-content: space-between;
+}
+
+.contacts__form > div {
+	width: 45%;
+}
+
+.contacts__form .field-title {
+	color: #fff;
+}
+
+.contacts__info {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+.contacts__info img {
+	width: 70px;
+	height: 100%;
+	margin-right: 10px;
+}
+/************* /КОНТАКТЫ ************/
+
+/************* КАРТА *************/
+#map {
+	position: relative;
+	margin-top: -40px;
+}
+/************* /КАРТА ************/
+
+/************* ПОДВАЛ *************/
+footer {
+	text-align: center;
+	padding: 10px;
+	color: var(--blue);
+	font-size: 20px;
+}
+/************* /ПОДВАЛ ************/
