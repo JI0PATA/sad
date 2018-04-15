@@ -67,6 +67,26 @@ Route::prefix('admin')->middleware('AdminPanel')->group(function() {
        Route::get('delete/{id}', 'ReviewController@delete')->name('deleteReview');
     });
 
+    Route::prefix('album')->group(function() {
+       Route::get('/', 'AlbumController@index')->name('albums');
+
+       Route::get('add', 'AlbumController@add')->name('addAlbum');
+       Route::post('create', 'AlbumController@create')->name('createAlbum');
+
+       Route::get('edit/{id}', 'AlbumController@edit')->name('editAlbum');
+       Route::post('update/{id}', 'AlbumController@update')->name('updateAlbum');
+
+       Route::get('delete/{id}', 'AlbumController@delete')->name('deleteAlbum');
+
+       Route::get('photos/{id}', 'AlbumController@photos')->name('photosInAlbum');
+
+       Route::post('uploadPhotos/{id}', 'AlbumController@uploadPhotos')->name('uploadPhotos');
+    });
+
+    Route::prefix('photos')->group(function() {
+        Route::get('delete/{id}', 'PhotoController@delete')->name('deletePhoto');
+    });
+
 });
 
 Route::post('callback', 'HomeController@callback')->name('callback');
