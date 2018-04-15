@@ -5,19 +5,21 @@
 @section('content')
     <header id="hat">
         <menu id="menu" class="wp">
-            <a href="#" class="menu__item">главная</a>
-            <a href="#" class="menu__item">о садике</a>
-            <a href="#" class="menu__item">события</a>
-            <a href="#" class="menu__item">педагоги</a>
-            <a href="#" class="menu__item">галерея</a>
-            <a href="#" class="menu__item">отзывы</a>
-            <a href="#" class="menu__item">контакты</a>
+            <a href="#hat" class="menu__item">главная</a>
+            <a href="#stuff" class="menu__item">о садике</a>
+            <a href="#stuff" class="menu__item">события</a>
+            <a href="#mentors" class="menu__item">педагоги</a>
+            <a href="#albums" class="menu__item">галерея</a>
+            <a href="#callback" class="menu__item">отзывы</a>
+            <a href="#contacts" class="menu__item">контакты</a>
         </menu>
 
         <div class="hat__item wp">
             <div id="slider" class="hat__sub-item">
-                <div class="slider__item" style="background-image: url('{{asset('img/slider/slider1.png')}}')"></div>
-                <div class="slider__item" style="background-image: url('{{asset('img/slider/slider1.png')}}')"></div>
+                @foreach($slides as $slide)
+                    <div class="slider__item"
+                         style="background-image: url('{{asset('img/slider/'.$slide['img'])}}')"></div>
+                @endforeach
             </div>
             <form id="callback-form" class="hat__sub-item" method="POST" action="">
                 <h2 class="title">запишитесь на приём</h2>
@@ -226,6 +228,7 @@
     </section>
 
     <div id="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2242.5114967003638!2d49.174819215932445!3d55.80171998056637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415eb2821ae12973%3A0xb7064b3d52be5316!2z0YPQuy4g0JPQsNC70LXQtdCy0LAsIDPQkCwg0JrQsNC30LDQvdGMLCDQoNC10YHQvy4g0KLQsNGC0LDRgNGB0YLQsNC9LCA0MjAwNjE!5e0!3m2!1sru!2sru!4v1523809992347" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2242.5114967003638!2d49.174819215932445!3d55.80171998056637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415eb2821ae12973%3A0xb7064b3d52be5316!2z0YPQuy4g0JPQsNC70LXQtdCy0LAsIDPQkCwg0JrQsNC30LDQvdGMLCDQoNC10YHQvy4g0KLQsNGC0LDRgNGB0YLQsNC9LCA0MjAwNjE!5e0!3m2!1sru!2sru!4v1523809992347"
+                width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
 @endsection
