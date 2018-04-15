@@ -1,3 +1,5 @@
+{{ config(['app.name' => 'Главная страница']) }}
+
 @extends('layouts.app')
 
 @section('content')
