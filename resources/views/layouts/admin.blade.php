@@ -45,7 +45,7 @@
                     <li><a href="{{ route('admin') }}" class="nav-link" href="">{{ __('Главная') }}</a></li>
                     <li><a href="{{ route('mentors') }}" class="nav-link" href="">{{ __('Наставники') }}</a></li>
                     <li><a href="{{ route('news') }}" class="nav-link" href="">{{ __('Новости') }}</a></li>
-                    <li><a class="nav-link" href="">{{ __('Отзывы') }}</a></li>
+                    <li><a href="{{ route('reviews') }}" class="nav-link" href="">{{ __('Отзывы') }}</a></li>
                     <li><a class="nav-link" href="">{{ __('Альбомы') }}</a></li>
                     <li><a href="{{ route('logout') }}" class="nav-link" href="">{{ __('Выйти') }}</a></li>
                 @endif

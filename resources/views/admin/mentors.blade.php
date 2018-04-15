@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="wp">
-        <a href="{{ route('addMentor') }}">Добавить воспитателя</a>
+        <a href="{{ route('addMentor') }}">Добавить воспитателя</a><br>
         <div class="flex">
             @foreach($mentors as $mentor)
                 <div class="slider__item mentors">

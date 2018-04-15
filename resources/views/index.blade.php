@@ -184,21 +184,22 @@
                 <h2 class="title">у вас есть вопросы?</h2>
                 <h3 class="title">напиште нам</h3>
 
-                <form action="" method="POST" class="contacts__form">
+                <form action="{{ route('callback') }}" method="POST" class="contacts__form">
+                    {{ csrf_field() }}
                     <div>
                         <div class="form__group">
                             <div class="field-title">Ф.И.О.</div>
-                            <input type="text">
+                            <input type="text" name="name" required>
                         </div>
                         <div class="form__group">
                             <div class="field-title">Ваш E-mail</div>
-                            <input type="email">
+                            <input type="email" name="email" required>
                         </div>
                     </div>
                     <div>
                         <div class="form__group">
                             <div class="field-title">Ваш отзыв</div>
-                            <textarea name=""></textarea>
+                            <textarea name="comment" required></textarea>
                         </div>
                         <button>Отправить</button>
                     </div>

@@ -57,4 +57,16 @@ Route::prefix('admin')->middleware('AdminPanel')->group(function() {
         Route::get('delete/{id}', 'NewsController@delete')->name('deleteNews');
     });
 
+    Route::prefix('reviews')->group(function() {
+       Route::get('/', 'ReviewController@index')->name('reviews');
+
+       Route::get('active/{id}', 'ReviewController@active')->name('activeReview');
+
+       Route::get('block/{id}', 'ReviewController@block')->name('blockReview');
+
+       Route::get('delete/{id}', 'ReviewController@delete')->name('deleteReview');
+    });
+
 });
+
+Route::post('callback', 'HomeController@callback')->name('callback');
