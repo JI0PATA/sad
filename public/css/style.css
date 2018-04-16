@@ -170,6 +170,10 @@ button:hover {
 	margin-bottom: 40px;
 }
 
+.full_item {
+	width: 100%;
+}
+
 .top {
 	position: relative;
 	text-align: center;

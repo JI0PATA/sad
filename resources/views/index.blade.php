@@ -74,9 +74,9 @@
                 </div>
             </div>
             <div class="text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae doloremque laudantium minus nam
-                perspiciatis quam quidem, reprehenderit suscipit temporibus voluptas.
+                {!! $news['description'] !!}
             </div>
+            <a href="{{ route('getNews') }}">Все новости</a>
         </div>
     </section>
 
@@ -85,39 +85,22 @@
             <h2 class="title">наставники</h2>
         </div>
         <div class="list__items wp">
+            @foreach($mentors as $mentor)
             <div class="list__item">
                 <div class="item__photo">
-                    <img src="{{ asset('img/mentors/mentor1.png') }}" alt="">
+                    <img src="{{ asset('img/mentors/'.$mentor['img']) }}" alt="">
                 </div>
                 <div class="item__info">
-                    <p>Должность</p>
-                    <p>Стаж</p>
-                    <p>Образование</p>
-                    <p>Грамоты</p>
+                    <p>{{ $mentor['position'] }}</p>
+                    <p>{{ $mentor['experience'] }}</p>
+                    <p>{{ $mentor['education'] }}</p>
+                    <p>{{ $mentor['merit'] }}</p>
                 </div>
             </div>
-            <div class="list__item">
-                <div class="item__photo">
-                    <img src="{{ asset('img/mentors/mentor2.png') }}" alt="">
-                </div>
-                <div class="item__info">
-                    <p>Должность</p>
-                    <p>Стаж</p>
-                    <p>Образование</p>
-                    <p>Грамоты</p>
-                </div>
-            </div>
-            <div class="list__item">
-                <div class="item__photo">
-                    <img src="{{ asset('img/mentors/mentor3.png') }}" alt="">
-                </div>
-                <div class="item__info">
-                    <p>Должность</p>
-                    <p>Стаж</p>
-                    <p>Образование</p>
-                    <p>Грамоты</p>
-                </div>
-            </div>
+            @endforeach
+        </div>
+        <div class="wp">
+            <a href="">Все воспитатели</a>
         </div>
     </section>
 
@@ -129,25 +112,16 @@
             </div>
         </div>
         <div class="albums__items">
-            <div class="albums__item">
-                <div class="album__title">Творческие занятия</div>
-                <div class="album__preview">
-                    <img src="{{ asset('img/albums/album1.png') }}" alt="">
-                </div>
-            </div>
-            <div class="albums__item">
-                <div class="album__title">Наши таланты</div>
-                <div class="album__preview">
-                    <img src="{{ asset('img/albums/album2.png') }}" alt="">
-                </div>
-            </div>
-            <div class="albums__item">
-                <div class="album__title">Утренники</div>
-                <div class="album__preview">
-                    <img src="{{ asset('img/albums/album3.png') }}" alt="">
-                </div>
-            </div>
-        </div>
+            @foreach($albums as $album)
+                <a href="" class="albums__item">
+                    <div class="album__title">{{ $album['title'] }}</div>
+                    <div class="album__preview">
+                        <img src="{{ asset('img/albums/'.$album['img']) }}" alt="">
+                    </div>
+                </a>
+            @endforeach
+        </div><br><br>
+        <a href="">Все альбомы</a>
     </section>
 
     <section id="callback" class="wp">
@@ -158,21 +132,16 @@
             </div>
         </div>
         <div class="callback__items">
+            @foreach($reviews as $review)
             <div class="callback__item">
-                <div class="callback__name">имя</div>
+                <div class="callback__name">{{ $review['name'] }}</div>
                 <div class="callback__comment">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-                    blanditiis consequatur deleniti eum expedita fuga in magni non odit officiis.
+                    {{ $review['comment'] }}
                 </div>
             </div>
-            <div class="callback__item">
-                <div class="callback__name">имя</div>
-                <div class="callback__comment">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-                    blanditiis consequatur deleniti eum expedita fuga in magni non odit officiis.
-                </div>
-            </div>
-        </div>
+            @endforeach
+        </div><br><br>
+        <a href="">Все отзывы</a>
     </section>
 
     <section id="contacts">

@@ -89,4 +89,6 @@ Route::prefix('admin')->middleware('AdminPanel')->group(function() {
 
 });
 
+Route::get('news', 'NewsController@getAllNews')->name('getNews');
+
 Route::post('callback', 'HomeController@callback')->name('callback');
