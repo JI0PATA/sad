@@ -18,14 +18,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $slides = Slide::orderBy('id', 'DESC')->get();
         $news = News::orderBy('id', 'DESC')->limit('1')->first();
         $mentors = Mentor::orderBy('id', 'DESC')->limit('3')->get();
         $albums = Album::orderBy('id', 'DESC')->limit('3')->get();
         $reviews = Review::where('active', 1)->orderBy('id', 'DESC')->limit('2')->get();
 
         return view('index', [
-            'slides' => $slides,
             'news' => $news,
             'mentors' => $mentors,
             'albums' => $albums,

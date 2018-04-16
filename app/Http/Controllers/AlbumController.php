@@ -98,4 +98,13 @@ class AlbumController extends Controller
 
         return back();
     }
+
+    public function getAlbums()
+    {
+        $albums = Album::orderBy('id', 'DESC')->get();
+
+        return view('albums', [
+            'albums' => $albums
+        ]);
+    }
 }

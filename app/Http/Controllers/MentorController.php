@@ -79,4 +79,13 @@ class MentorController extends Controller
         $mentor->delete();
         return redirect()->route('mentors');
     }
+
+    public function getAllMentors()
+    {
+        $mentors = Mentor::orderBy('id', 'DESC')->get();
+
+        return view('mentors', [
+            'mentors' => $mentors
+        ]);
+    }
 }

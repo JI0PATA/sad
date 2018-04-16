@@ -82,4 +82,13 @@ class NewsController extends Controller
             'news' => $news
         ]);
     }
+
+    public function article($id)
+    {
+        $news = News::find($id);
+
+        return view('article', [
+            'article' => $news
+        ]);
+    }
 }

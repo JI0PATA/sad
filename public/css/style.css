@@ -23,11 +23,11 @@ section {
 }
 
 :root {
-	--blue: #0096FC;
-	--blue-darken: #0054a8;
-	--light-blue: #BAEFFC;
-	--red: #FF7E64;
-	--yellow: #FFD25D;
+	--blue: #0096FC !important;
+	--blue-darken: #0054a8 !important;
+	--light-blue: #BAEFFC !important;
+	--red: #FF7E64 !important;
+	--yellow: #FFD25D !important;
 }
 
 .no-transition * {
@@ -49,6 +49,18 @@ section {
 	text-align: center;
 }
 
+.hor-right {
+	text-align: right;
+}
+
+.hor-left {
+	text-align: left;
+}
+
+.text {
+	font-size: 18px;
+}
+
 /************* /ОБЩИЕ СТИЛИ ************/
 
 /************* ШАПКА *************/
@@ -57,6 +69,7 @@ section {
 	height: 700px;
 	background-image: url('../img/bg_home.png');
 	background-size: cover;
+	padding-top: 60px;
 }
 
 #menu {
@@ -71,6 +84,12 @@ section {
 	font-size: 18px;
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
+	border: 1px solid var(--blue);
 }
 
 .menu__item {
@@ -106,6 +125,20 @@ section {
 	background-position: center center;
 }
 
+.slick-dots li button {
+	font-size: 0 !important;
+	line-height: 0;
+	display: block !important;
+	width: 20px;
+	height: 20px;
+	padding: 5px !important;
+	cursor: pointer;
+	color: transparent !important;
+	border: 0 !important;
+	outline: none;
+	background: transparent !important;
+}
+
 /************* ФОРМА ОБРАТНОЙ СВЯЗИ *************/
 #callback-form {
 	display: flex;
@@ -138,20 +171,20 @@ section {
 }
 
 button {
-	text-transform: uppercase;
-	background: var(--light-blue);
-	color: var(--blue);
-	display: inline-block;
-	padding: 10px 25px;
-	font-size: 20px;
-	border: transparent;
-	border-radius: 20px;
-	cursor: pointer;
-	transition: background .4s;
+	text-transform: uppercase !important;
+	background: var(--light-blue) !important;
+	color: var(--blue) !important;
+	display: inline-block !important;
+	padding: 10px 25px !important;
+	font-size: 20px !important;
+	border: transparent !important;
+	border-radius: 20px !important;
+	cursor: pointer !important;
+	transition: background .4s !important;
 }
 
 button:hover {
-	background: var(--blue-darken);
+	background: var(--blue-darken) !important;
 }
 
 /************* /ФОРМА ОБРАТНОЙ СВЯЗИ ************/
@@ -271,6 +304,9 @@ button:hover {
 
 .albums__item {
 	width: 30%;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 30px;
 }
 
 .album__title {
@@ -280,10 +316,36 @@ button:hover {
 	color: #000;
 }
 
+.album__preview {
+	position: relative;
+}
+
 .album__preview img {
 	width: 100%;
+	height: 100%;
 	border-radius: 20px;
 	cursor: pointer;
+}
+
+.albums__item .view-hidden {
+	position: absolute;
+	width: 100%;
+	height: 98%;
+	top: 100%;
+	left: 0;
+	background: rgba(0, 0, 0, .6);
+	text-transform: uppercase;
+	font-size: 20px;
+	color: #fff;
+	transition: top .4s;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.albums__item:hover .view-hidden {
+	top: 0;
 }
 
 /************* /АЛЬБОМЫ ************/
@@ -293,11 +355,13 @@ button:hover {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .callback__item {
 	width: 40%;
 	text-align: center;
+	margin-bottom: 40px;
 }
 
 .callback__name {
@@ -391,3 +455,123 @@ footer {
 	font-size: 20px;
 }
 /************* /ПОДВАЛ ************/
+
+/************* НОВОСТИ *************/
+.news {
+	width: 100%;
+	margin-top: 50px;
+}
+
+.news__item {
+	background-image: url('../img/bg_clouds_light.png');
+	background-size: 100% 100%;
+	height: 400px;
+	padding: 40px;
+	color: var(--blue);
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+.news__info {
+	display: flex;
+}
+
+.news__img {
+	flex: 0 0 200px;
+	height: 200px;
+	background-size: cover;
+	background-position: center center;
+	margin-right: 20px;
+}
+
+.news__description {
+	font-size: 18px;
+	height: 190px;
+	overflow: hidden;
+}
+
+.news__title {
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.news__date {
+	text-align: right;
+}
+/************* /НОВОСТИ ************/
+
+/************* СТРАНИЦА НОВОСТИ *************/
+.article {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.article::after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+.article__title {
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.article__img {
+	width: 350px;
+	float: left;
+	margin-right: 30px;
+}
+
+.article__description {
+	font-size: 18px;
+}
+
+
+/************* /СТРАНИЦА НОВОСТИ ************/
+
+/************* СТРАНИЦА ВОСПИТАТЕЛЕЙ *************/
+.mentors {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.mentor__item {
+	margin-bottom: 30px;
+}
+
+.mentor__item > div {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.mentor__photo {
+	width: 250px;
+	margin-right: 30px;
+}
+
+.mentor__photo img {
+	width: 100%;
+}
+
+.mentor__info {
+	font-size: 18px;
+}
+
+.mentor__info p {
+	margin-bottom: 10px;
+}
+/************* /СТРАНИЦА ВОСПИТАТЕЛЕЙ ************/
+
+/************* СТРАНИЦА *************/
+.page {
+	margin-top: 30px;
+}
+
+.page__description {
+	font-size: 18px;
+}
+/************* /СТРАНИЦА ************/

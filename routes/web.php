@@ -89,6 +89,36 @@ Route::prefix('admin')->middleware('AdminPanel')->group(function() {
 
 });
 
-Route::get('news', 'NewsController@getAllNews')->name('getNews');
+
+Route::prefix('news')->group(function() {
+    Route::get('/', 'NewsController@getAllNews')->name('getNews');
+    Route::get('article/{id}', 'NewsController@article')->name('article');
+});
+
+Route::get('mentors', 'MentorController@getAllMentors')->name('allMentors');
+
+Route::prefix('albums')->group(function() {
+    Route::get('/', 'AlbumController@getAlbums')->name('user.albums');
+
+    Route::get('{id}', 'PhotoController@getPhotos')->name('user.photosInAlbum');
+});
+
+Route::get('reviews', 'ReviewController@getReviews')->name('user.reviews');
+
+Route::get('about', function() {
+    return view('about');
+})->name('about');
+
+Route::get('licenses', function() {
+    return view('licenses');
+})->name('licenses');
+
+Route::get('vacancies', function() {
+    return view('vacancies');
+})->name('vacancies');
+
+Route::get('advantages', function() {
+    return view('advantages');
+})->name('advantages');
 
 Route::post('callback', 'HomeController@callback')->name('callback');

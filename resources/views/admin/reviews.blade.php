@@ -7,10 +7,10 @@
                 <div class="news__title">
                     {{ $review['name'] }} Опубликовано: {{ $review['created_at']->format('d.m.Y H:i') }}
                 </div>
-                <div class="news__description">
+                <div class="text">
                     {{ $review['email'] }}
                 </div>
-                <div class="news__description">
+                <div class="text">
                     {{ $review['comment'] }}
                 </div>
                 <div>

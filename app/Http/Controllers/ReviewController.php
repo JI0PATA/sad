@@ -42,4 +42,13 @@ class ReviewController extends Controller
 
         return back();
     }
+
+    public function getReviews()
+    {
+        $reviews = Review::where('active', '1')->orderBy('id', 'DESC')->get();
+
+        return view('reviews', [
+            'reviews' => $reviews
+        ]);
+    }
 }

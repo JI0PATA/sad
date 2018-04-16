@@ -3,18 +3,22 @@
 @section('content')
 
     <div class="news">
-        <div class="news__item">
-            <div class="news__title">Название</div>
-            <div class="news__info">
-                <div class="news__img"></div>
-                <div class="news__description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias animi aspernatur consequatur culpa
-                    cumque ducimus eaque eligendi illo impedit iste iure, laudantium maiores minima neque numquam odio
-                    provident quidem quod quos repudiandae, rerum sunt suscipit temporibus totam veritatis voluptatum.
+        @foreach($news as $item)
+            <div class="news__item">
+                <div class="wp">
+                    <div class="news__title">{{ $item['title'] }}</div>
+                    <div class="news__info">
+                        <div class="news__img"
+                             style="background-image: url({{ asset('img/news/'.$item['img']) }})"></div>
+                        <div class="news__description">
+                            {!!  $item['description'] !!}
+                            <br><a href="{{ route('article', ['id' => $item['id']]) }}">Читать...</a>
+                        </div>
+                    </div>
+                    <div class="news__date">{{ $item['created_at']->format('d.m.Y H:i') }}</div>
                 </div>
             </div>
-            <div class="news__date">25/02/2017</div>
-        </div>
+        @endforeach
     </div>
 
 @endsection
