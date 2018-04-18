@@ -76,6 +76,8 @@ class UploadedFile extends File
      */
     public function getClientOriginalName()
     {
+        $originalName = str_replace(' ', '%20', $this->originalName);
+
         return $this->originalName;
     }
 
