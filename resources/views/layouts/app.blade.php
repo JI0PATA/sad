@@ -78,7 +78,7 @@
                 <div>
                     <div class="form__group">
                         <div class="field-title">Ф.И.О.</div>
-                        <input type="text" name="name" required>
+                        <input type="text" name="name" required maxlength="25">
                     </div>
                     <div class="form__group">
                         <div class="field-title">Ваш E-mail</div>
@@ -135,13 +135,14 @@
             autoplay: true,
             autoplaySpeed: 3000,
             arrows: false,
+            accessibility: false,
         });
 
         $("a[href^='#']").on("click", function (event) {
             event.preventDefault();
             let id  = $(this).attr('href'),
                 top = $(id).offset().top;
-            $('body,html').animate({scrollTop: top}, 1500);
+            $('body,html').animate({scrollTop: top - 100}, 1500);
         });
     });
 </script>

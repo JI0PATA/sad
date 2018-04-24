@@ -60,10 +60,10 @@
                     <img src="{{ asset('img/mentors/'.$mentor['img']) }}" alt="">
                 </div>
                 <div class="item__info">
-                    <p>{{ $mentor['position'] }}</p>
-                    <p>{{ $mentor['experience'] }}</p>
-                    <p>{{ $mentor['education'] }}</p>
-                    <p>{{ $mentor['merit'] }}</p>
+                    <p>Должность: {{ $mentor['position'] }}</p>
+                    <p>Стаж: {{ $mentor['experience'] }}</p>
+                    <p>Образование: {{ $mentor['education'] }}</p>
+                    <p>Грамоты: {{ $mentor['merit'] }}</p>
                 </div>
             </div>
             @endforeach
