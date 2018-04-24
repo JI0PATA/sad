@@ -9,6 +9,7 @@
                     <img src="{{ asset('img/mentors/'.$mentor['img']) }}" alt="">
                 </div>
                 <div class="mentor__info">
+                    <p>{{ $mentor['name'] }}</p>
                     <p>Должность: {{ $mentor['position'] }}</p>
                     <p>Стаж: {{ $mentor['experience'] }}</p>
                     <p>Образование: {{ $mentor['education'] }}</p>

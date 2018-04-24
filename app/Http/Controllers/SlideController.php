@@ -22,6 +22,8 @@ class SlideController extends Controller
             $slide->img = $request->file->getClientOriginalName();
         } else return back();
 
+        $slide->description = $request->description;
+
         $slide->save();
 
         return redirect()->route('admin');
@@ -47,7 +49,9 @@ class SlideController extends Controller
             } else return back();
         }
 
-        $slide->save();
+        $slide->description = $request->description;
+
+        $slide->update();
 
         return back();
     }

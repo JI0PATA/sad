@@ -39,7 +39,11 @@
             ?>
             @foreach($slides as $slide)
                 <div class="slider__item"
-                     style="background-image: url('{{asset('img/slider/'.$slide['img'])}}')"></div>
+                     style="background-image: url('{{asset('img/slider/'.$slide['img'])}}')">
+                    <div class="slide__description">
+                        {!! $slide['description'] !!}
+                    </div>
+                </div>
             @endforeach
         </div>
         <form id="callback-form" class="hat__sub-item" method="POST" action="">
@@ -127,7 +131,7 @@
 </footer>
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('.no-transition').removeClass('no-transition');
 
         $('#slider').slick({
@@ -140,7 +144,7 @@
 
         $("a[href^='#']").on("click", function (event) {
             event.preventDefault();
-            let id  = $(this).attr('href'),
+            let id = $(this).attr('href'),
                 top = $(id).offset().top;
             $('body,html').animate({scrollTop: top - 100}, 1500);
         });

@@ -56,6 +56,7 @@
 <script>
     $(document).ready(_ => {
         CKEDITOR.replace('textarea');
+        CKEDITOR.config.height = 500;
     });
 </script>
 
