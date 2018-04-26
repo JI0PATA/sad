@@ -14,6 +14,10 @@ a {
 	text-decoration: none;
 }
 
+.hidden {
+	display: none;
+}
+
 a:hover {
 	text-decoration: none !important;
 }
@@ -32,6 +36,24 @@ section {
 
 .no-transition * {
 	transition: none;
+}
+
+::-webkit-scrollbar-button {
+	width: 5px;
+	height: 0;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 0;
+	background-color: var(--blue);
+}
+
+::-webkit-scrollbar {
+	width: 5px;
 }
 
 /************* ОБЩИЕ СТИЛИ *************/
@@ -90,6 +112,7 @@ section {
 	transform: translateX(-50%);
 	z-index: 10;
 	border: 1px solid var(--blue);
+	transition: .4s;
 }
 
 .menu__item {
@@ -99,6 +122,31 @@ section {
 
 .menu__item:hover {
 	color: var(--blue-darken);
+}
+
+.san-menu {
+	width: 50px;
+	cursor: pointer;
+	position: fixed;
+	z-index: 10;
+	top: 10px;
+	right: 10px;
+	padding: 10px;
+	background: var(--blue);
+	border-radius: 10px;
+	display: none;
+}
+
+.san-menu div {
+	width: 100%;
+	height: 3px;
+	background: #fff;
+	border-radius: 5px;
+	margin-bottom: 4px;
+}
+
+.close {
+	display: none;
 }
 
 .hat__item {
@@ -112,10 +160,10 @@ section {
 
 #slider {
 	width: 800px;
-	height: 500px;
+	min-height: 500px;
 }
 
-.slick-list, .slidet__item, .slick-track {
+.slick-list, .slider__item, .slick-track {
 	width: 100%;
 	height: 100%;
 }
@@ -326,6 +374,7 @@ button:hover {
 	overflow: hidden;
 	position: relative;
 	margin-bottom: 30px;
+	display: block;
 }
 
 .album__title {
@@ -337,7 +386,6 @@ button:hover {
 
 .album__preview {
 	position: relative;
-	width: 350px;
 	height: 200px;
 	background-size: cover;
 	background-position: center center;

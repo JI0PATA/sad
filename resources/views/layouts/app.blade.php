@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/media.css') }}" rel="stylesheet">
 
     <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
 
@@ -22,7 +23,14 @@
 </head>
 <body class="no-transition">
 <header id="hat">
+    <input type="checkbox" class="hidden" id="menu_mobile">
+    <label class="san-menu" for="menu_mobile">
+        <div></div>
+        <div></div>
+        <div></div>
+    </label>
     <menu id="menu" class="wp">
+        <label for="menu_mobile" class="close">X</label>
         <a href="/" class="menu__item">главная</a>
         <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#stuff" class="menu__item">о садике</a>
         <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#stuff" class="menu__item">события</a>
@@ -141,6 +149,9 @@
             arrows: false,
             accessibility: false,
         });
+
+        var stHeight = $('.slide__description').height();
+        $('#slider').css('height', stHeight + 'px' );
 
         $("a[href^='#']").on("click", function (event) {
             event.preventDefault();
