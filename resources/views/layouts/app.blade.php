@@ -151,7 +151,13 @@
         });
 
         var stHeight = $('.slide__description').height();
-        $('#slider').css('height', stHeight + 'px' );
+        $('#slider').css('height', stHeight + 'px');
+
+        $('#menu a').on('click', _ => {
+           if ($('#menu_mobile').prop('checked')) {
+               $('#menu_mobile').prop('checked', false);
+           }
+        });
 
         $("a[href^='#']").on("click", function (event) {
             event.preventDefault();
