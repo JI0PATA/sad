@@ -36,6 +36,7 @@
     </label>
     <menu id="menu" class="wp">
         <label for="menu_mobile" class="close">X</label>
+        <img src="{{ asset('img/logo.jpg') }}" alt="">
         <a href="/" class="menu__item">главная</a>
         <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#stuff" class="menu__item">о садике</a>
         <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#stuff" class="menu__item">события</a>

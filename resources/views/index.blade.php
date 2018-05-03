@@ -33,7 +33,9 @@
             </div>
             <div class="text">
                 <a href="{{ route('licenses') }}">Лицензии</a><br>
-                <a href="{{ route('documents') }}">Документы</a>
+                <a href="{{ asset('documents/2-kh_ned_menyu.xls') }}" download>Сведения об условиях питания</a><br>
+                <a href="{{ asset('documents/raspisanie_na_2017-18_g_1.pdf') }}" download>Расписание</a><br>
+                <a href="{{ asset('documents/Ustav_2015_Berezka.pdf') }}" download>Устав</a><br>
             </div>
         </div>
         <div class="full_item">
