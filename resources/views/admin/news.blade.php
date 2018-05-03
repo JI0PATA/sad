@@ -4,7 +4,7 @@
     <div class="wp">
         <a href="{{ route('addNews') }}">Добавить новость</a>
         @foreach($news as $item)
-            <div class="slider__item">
+            <div class="slider__item news">
                 <img src="{{asset('img/news/'.$item['img'])}}" alt="">
                 <div class="news__title">
                     {{ $item['title'] }}

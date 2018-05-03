@@ -19,6 +19,14 @@
 	margin-bottom: 30px;
 }
 
+.slider__item:not(.slider):before {
+	display: none;
+}
+
+.slider__item img {
+	width: 100%;
+}
+
 .slide__img {
 	width: 100%;
 }
