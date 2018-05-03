@@ -1,3 +1,5 @@
+{{ config(['app.name' => 'Детский сад "Березка"']) }}
+
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
