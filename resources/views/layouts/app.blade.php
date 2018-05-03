@@ -123,7 +123,7 @@
             <div class="contacts__info">
                 <img src="{{ asset('img/call_icon.png') }}" alt="">
                 <div>
-                    Телефон: +7(843)-462-08-29; +7(843)-462-08-30<br>
+                    Телефон: +7(843)-462-08-29; <br>+7(843)-462-08-30<br>
                     EMail:Berezka.Alk@tatar.ru
                 </div>
             </div>

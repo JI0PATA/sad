@@ -506,7 +506,7 @@ button:hover {
 
 .contacts__info {
 	display: flex;
-	justify-content: space-between;
+	/*justify-content: space-between;*/
 	margin-top: 20px;
 }
 
