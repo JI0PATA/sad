@@ -22,6 +22,9 @@
     <script src="{{ asset('components/slick/slick.min.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('components/slick/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('components/slick/slick-theme.css') }}">
+
+    <script src="{{ asset('components/lightbox/js/lightbox.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('components/lightbox/css/lightbox.css') }}">
 </head>
 <body class="no-transition">
 <header id="hat">
@@ -114,17 +117,14 @@
             <div class="contacts__info">
                 <img src="{{ asset('img/geo_icon.png') }}" alt="">
                 <div>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, totam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, totam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, totam?
+                    Адрес:422870, Республика Татарстан, Алькеевский район, с. Базарные Матаки, ул. Школьная, д. 11
                 </div>
             </div>
             <div class="contacts__info">
                 <img src="{{ asset('img/call_icon.png') }}" alt="">
                 <div>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, totam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, totam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, totam?
+                    Телефон: +7(843)-462-08-29; +7(843)-462-08-30<br>
+                    EMail:Berezka.Alk@tatar.ru
                 </div>
             </div>
         </div>

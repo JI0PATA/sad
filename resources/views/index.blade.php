@@ -13,8 +13,12 @@
                 </div>
             </div>
             <div class="text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae doloremque laudantium minus nam
-                perspiciatis quam quidem, reprehenderit suscipit temporibus voluptas.<br><br>
+                Наш детский садик - не просто сад в привычном для всех понимании. Это своего рода комплексный центр
+                развития Вашего чада.
+
+                Самое главное - безграничная любовь наших педагогов к детям и преданность своей профессии, вот в чем
+                секрет успеха детского садика!
+                <br><br>
                 <div class="hor-left">
                     <a href="{{ route('about') }}" class="btn btn-primary">Подробнее...</a>
                 </div>
@@ -28,11 +32,8 @@
                 </div>
             </div>
             <div class="text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae doloremque laudantium minus nam
-                perspiciatis quam quidem, reprehenderit suscipit temporibus voluptas.<br><br>
-            </div>
-            <div class="hor-left">
-                <a href="{{ route('licenses') }}" class="btn btn-primary">Подробнее...</a>
+                <a href="{{ route('licenses') }}">Лицензии</a><br>
+                <a href="{{ route('documents') }}">Документы</a>
             </div>
         </div>
         <div class="full_item">
@@ -55,18 +56,18 @@
         </div>
         <div class="list__items wp">
             @foreach($mentors as $mentor)
-            <div class="list__item">
-                <div class="item__photo">
-                    <img src="{{ asset('img/mentors/'.$mentor['img']) }}" alt="">
+                <div class="list__item">
+                    <div class="item__photo">
+                        <img src="{{ asset('img/mentors/'.$mentor['img']) }}" alt="">
+                    </div>
+                    <div class="item__info">
+                        <p>{{ $mentor['name'] }}</p>
+                        <p>Должность: {{ $mentor['position'] }}</p>
+                        <p>Стаж: {{ $mentor['experience'] }}</p>
+                        <p>Образование: {{ $mentor['education'] }}</p>
+                        <p>Грамоты: {{ $mentor['merit'] }}</p>
+                    </div>
                 </div>
-                <div class="item__info">
-                    <p>{{ $mentor['name'] }}</p>
-                    <p>Должность: {{ $mentor['position'] }}</p>
-                    <p>Стаж: {{ $mentor['experience'] }}</p>
-                    <p>Образование: {{ $mentor['education'] }}</p>
-                    <p>Грамоты: {{ $mentor['merit'] }}</p>
-                </div>
-            </div>
             @endforeach
         </div>
         <div class="wp">
@@ -85,12 +86,14 @@
             @foreach($albums as $album)
                 <a href="{{ route('user.photosInAlbum', ['id' => $album['id']]) }}" class="albums__item">
                     <div class="album__title">{{ $album['title'] }}</div>
-                    <div class="album__preview" style="background-image: url('{{ asset('img/albums/'.$album['img']) }}')">
+                    <div class="album__preview"
+                         style="background-image: url('{{ asset('img/albums/'.$album['img']) }}')">
                         <div class="view-hidden">посмотреть</div>
                     </div>
                 </a>
             @endforeach
-        </div><br><br>
+        </div>
+        <br><br>
         <a href="{{ route('user.albums') }}" class="btn btn-primary">Все альбомы</a>
     </section>
 
@@ -103,14 +106,15 @@
         </div>
         <div class="callback__items">
             @foreach($reviews as $review)
-            <div class="callback__item">
-                <div class="callback__name">{{ $review['name'] }}</div>
-                <div class="callback__comment">
-                    {{ $review['comment'] }}
+                <div class="callback__item">
+                    <div class="callback__name">{{ $review['name'] }}</div>
+                    <div class="callback__comment">
+                        {{ $review['comment'] }}
+                    </div>
                 </div>
-            </div>
             @endforeach
-        </div><br><br>
+        </div>
+        <br><br>
         <a href="{{ route('user.reviews') }}" class="btn btn-primary">Все отзывы</a>
     </section>
 @endsection

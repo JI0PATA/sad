@@ -652,4 +652,11 @@ footer {
 	font-size: 18px;
 	text-align: justify;
 }
+
+.page__description img {
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 30px;
+}
 /************* /СТРАНИЦА ************/

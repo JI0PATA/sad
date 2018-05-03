@@ -121,4 +121,8 @@ Route::get('advantages', function() {
     return view('advantages');
 })->name('advantages');
 
+Route::get('documents', function() {
+    return view('documents');
+})->name('documents');
+
 Route::post('callback', 'HomeController@callback')->name('callback');
