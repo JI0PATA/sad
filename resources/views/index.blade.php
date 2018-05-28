@@ -22,7 +22,7 @@
             <h2 class="title">запишитесь на приём</h2>
             <div class="form__group">
                 <div class="field-title">Дата рождения ребёнка</div>
-                <input type="text" name="birthdate" required title="Дата рождения: дд/мм/гггг" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}">
+                <input type="text" name="birthdate" required maxlength="10" title="Дата рождения: дд/мм/гггг" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}">
             </div>
             <div class="form__group">
                 <div class="field-title">Ф.И.О. заявителя</div>
