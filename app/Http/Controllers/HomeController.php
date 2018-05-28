@@ -38,7 +38,7 @@ class HomeController extends Controller
         $comment = $request->comment;
 
         if ($request->type == 0) {
-            mail('wanja_shukov@mail.ru', 'Вопрос от пользователя', "Имя: {$name}\nE-mail: {$email}\n Комментарий: {$comment}");
+            mail('wanja.shukov14@gmail.com', 'Вопрос от пользователя', "Имя: {$name}\nE-mail: {$email}\n Комментарий: {$comment}");
         } else {
             $review = new Review;
 
@@ -57,7 +57,7 @@ class HomeController extends Controller
         $birthdate = $request->birthdate;
         $name = $request->name;
         $call = $request->call;
-        mail('wanja_shukov@mail.ru', 'Запись на приём', "Дата рождения ребёнка: {$birthdate}\nФИО заявителя: {$name}\nТелефон заявителя: {$call}");
+        $res = mail('wanja.shukov14@gmail.com', 'Запись на приём', "Дата рождения ребёнка: {$birthdate}\nФИО заявителя: {$name}\nТелефон заявителя: {$call}");
 
         return back();
     }
