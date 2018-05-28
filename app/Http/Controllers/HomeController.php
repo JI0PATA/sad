@@ -58,5 +58,7 @@ class HomeController extends Controller
         $name = $request->name;
         $call = $request->call;
         mail('wanja_shukov@mail.ru', 'Запись на приём', "Дата рождения ребёнка: {$birthdate}\nФИО заявителя: {$name}\nТелефон заявителя: {$call}");
+
+        return back();
     }
 }
