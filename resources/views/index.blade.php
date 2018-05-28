@@ -18,6 +18,7 @@
             @endforeach
         </div>
         <form id="callback-form" class="hat__sub-item" method="POST" action="{{ route('subscribe') }}">
+            {{ csrf_field() }}
             <h2 class="title">запишитесь на приём</h2>
             <div class="form__group">
                 <div class="field-title">Дата рождения ребёнка</div>
