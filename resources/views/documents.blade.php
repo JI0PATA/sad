@@ -67,22 +67,5 @@
                 </ul>
             </div>
         </div>
-        <div class="albums__items wp">
-            <div class="albums__item">
-                <div class="album__preview">
-                    <img src="{{ asset('img/albums/album1.png') }}" alt="">
-                </div>
-            </div>
-            <div class="albums__item">
-                <div class="album__preview">
-                    <img src="{{ asset('img/albums/album2.png') }}" alt="">
-                </div>
-            </div>
-            <div class="albums__item">
-                <div class="album__preview">
-                    <img src="{{ asset('img/albums/album3.png') }}" alt="">
-                </div>
-            </div>
-        </div>
     </section>
 @endsection

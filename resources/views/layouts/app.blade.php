@@ -71,7 +71,7 @@
                         <div class="field-title">Ваш E-mail</div>
                         <input type="email" name="email" required>
                     </div>
-                </div>
+                </div><br>
                 <div>
                     <div class="form__group">
                         <div>
