@@ -9,7 +9,9 @@
         @foreach($photos as $photo)
             <div class="albums__item">
                 <div class="album__preview">
-                    <img src="{{ asset('img/albums/photos/'.$photo['img']) }}" alt="">
+                    <a href="{{ asset('img/albums/photos/'.$photo['img']) }}" data-lightbox="album">
+                        <img src="{{ asset('img/albums/photos/'.$photo['img']) }}" alt="">
+                    </a>
                 </div>
             </div>
         @endforeach

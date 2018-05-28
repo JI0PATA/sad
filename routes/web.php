@@ -126,3 +126,5 @@ Route::get('documents', function() {
 })->name('documents');
 
 Route::post('callback', 'HomeController@callback')->name('callback');
+
+Route::post('subscribe', 'HomeController@subscribe')->name('subscribe');

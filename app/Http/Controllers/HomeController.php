@@ -33,14 +33,30 @@ class HomeController extends Controller
 
     public function callback(Request $request)
     {
-        $review = new Review;
+        $name = $request->name;
+        $email = $request->email;
+        $comment = $request->comment;
 
-        $review->name = $request->name;
-        $review->email = $request->email;
-        $review->comment = $request->comment;
+        if ($request->type == 0) {
+            mail('wanja_shukov@mail.ru', 'Вопрос от пользователя', "Имя: {$name}\nE-mail: {$email}\n Комментарий: {$comment}");
+        } else {
+            $review = new Review;
 
-        $review->save();
+            $review->name = $name;
+            $review->email = $email;
+            $review->comment = $comment;
+
+            $review->save();
+        }
 
         return back();
+    }
+
+    public function subscribe(Request $request)
+    {
+        $birthdate = $request->birthdate;
+        $name = $request->name;
+        $call = $request->call;
+        mail('wanja_shukov@mail.ru', 'Запись на приём', "Дата рождения ребёнка: {$birthdate}\nФИО заявителя: {$name}\nТелефон заявителя: {$call}");
     }
 }

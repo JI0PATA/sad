@@ -36,6 +36,7 @@
     </label>
     <menu id="menu" class="wp">
         <label for="menu_mobile" class="close">X</label>
+
         <a href="/" class="menu__item">главная</a>
         <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#stuff" class="menu__item">о садике</a>
         <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#stuff" class="menu__item">события</a>
@@ -45,38 +46,7 @@
         <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#contacts" class="menu__item">контакты</a>
     </menu>
 
-    <div class="hat__item wp">
-        <div id="slider" class="hat__sub-item">
-            <?php
-            $slides = App\Slide::orderBy('id', 'DESC')->get();
-            ?>
-            @foreach($slides as $slide)
-                <div class="slider__item"
-                     style="background-image: url('{{asset('img/slider/'.$slide['img'])}}')">
-                    <div class="slide__description">
-                        {!! $slide['description'] !!}
-                    </div>
-                </div>
-            @endforeach
-        </div>
-        <form id="callback-form" class="hat__sub-item" method="POST" action="">
-            <h2 class="title">запишитесь на приём</h2>
-            <div class="form__group">
-                <div class="field-title">Дата рождения ребёнка</div>
-                <input type="text" name="birthdate">
-            </div>
-            <div class="form__group">
-                <div class="field-title">Ф.И.О. заявителя</div>
-                <input type="text" name="name">
-            </div>
-            <div class="form__group">
-                <div class="field-title">Телефон заявителя</div>
-                <input type="text" name="call">
-            </div>
-            <button>Отправить</button>
-        </form>
-
-    </div>
+    @yield('slider')
 </header>
 
 @yield('content')
@@ -88,7 +58,7 @@
         </div>
         <div class="contacts__item contacts__callback">
             <h2 class="title">у вас есть вопросы?</h2>
-            <h3 class="title">напиште нам</h3>
+            <h3 class="title">напишите нам</h3>
 
             <form action="{{ route('callback') }}" method="POST" class="contacts__form">
                 {{ csrf_field() }}
@@ -104,7 +74,12 @@
                 </div>
                 <div>
                     <div class="form__group">
-                        <div class="field-title">Ваш отзыв</div>
+                        <div>
+                            <select name="type">
+                                <option value="0">Вопрос</option>
+                                <option value="1">Отзыв</option>
+                            </select>
+                        </div><br>
                         <textarea name="comment" required></textarea>
                     </div>
                     <button>Отправить</button>
@@ -132,7 +107,7 @@
 </section>
 
 <div id="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2242.5114967003638!2d49.174819215932445!3d55.80171998056637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415eb2821ae12973%3A0xb7064b3d52be5316!2z0YPQuy4g0JPQsNC70LXQtdCy0LAsIDPQkCwg0JrQsNC30LDQvdGMLCDQoNC10YHQvy4g0KLQsNGC0LDRgNGB0YLQsNC9LCA0MjAwNjE!5e0!3m2!1sru!2sru!4v1523809992347"
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2430.473243190922!2d49.92804464287778!3d54.90184641167478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415dc2c952f17fa1%3A0x7553286596c4b06!2z0KjQutC-0LvRjNC90LDRjyDRg9C70LjRhtCwLCDQkdCw0LfQsNGA0L3Ri9C1INCc0LDRgtCw0LrQuCwg0KDQtdGB0L8uINCi0LDRgtCw0YDRgdGC0LDQvSwgNDIyODcw!5e0!3m2!1sru!2sru!4v1527497149637"
             width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 

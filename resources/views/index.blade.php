@@ -2,6 +2,41 @@
 
 @extends('layouts.app')
 
+@section('slider')
+    <div class="hat__item wp">
+        <div id="slider" class="hat__sub-item">
+            <?php
+            $slides = App\Slide::orderBy('id', 'DESC')->get();
+            ?>
+            @foreach($slides as $slide)
+                <div class="slider__item"
+                     style="background-image: url('{{asset('img/slider/'.$slide['img'])}}')">
+                    <div class="slide__description">
+                        {!! $slide['description'] !!}
+                    </div>
+                </div>
+            @endforeach
+        </div>
+        <form id="callback-form" class="hat__sub-item" method="POST" action="{{ route('subscribe') }}">
+            <h2 class="title">запишитесь на приём</h2>
+            <div class="form__group">
+                <div class="field-title">Дата рождения ребёнка</div>
+                <input type="text" name="birthdate" required title="Дата рождения: дд/мм/гггг" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}">
+            </div>
+            <div class="form__group">
+                <div class="field-title">Ф.И.О. заявителя</div>
+                <input type="text" name="name" pattern="^[А-Яа-яЁё\s]+$" title="ФИО" maxlength="25" required>
+            </div>
+            <div class="form__group">
+                <div class="field-title">Телефон заявителя</div>
+                <input type="tel" name="call" maxlength="11" title="Номер телефона (11 цифр)" required pattern="[0-9]{11}">
+            </div>
+            <button>Отправить</button>
+        </form>
+
+    </div>
+@endsection
+
 @section('content')
 
     <section id="stuff" class="wp">
