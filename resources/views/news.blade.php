@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-
+    <br>
+    <div class="hor-center">
+        <h1 class="title">новости</h1>
+    </div>
     <div class="news">
         @foreach($news as $item)
             <div class="news__item">

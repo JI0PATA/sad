@@ -44,8 +44,8 @@
 
         <a href="/" class="menu__item">главная</a>
         <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#stuff" class="menu__item">о садике</a>
-        <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#stuff" class="menu__item">события</a>
-        <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#mentors" class="menu__item">педагоги</a>
+        <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#stuff" class="menu__item">новости</a>
+        <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#mentors" class="menu__item">воспитатели</a>
         <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#albums" class="menu__item">галерея</a>
         <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#callback" class="menu__item">отзывы</a>
         <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#contacts" class="menu__item">контакты</a>
@@ -70,7 +70,7 @@
                 <div>
                     <div class="form__group">
                         <div class="field-title">Ф.И.О.</div>
-                        <input type="text" name="name" required maxlength="25">
+                        <input type="text" name="name" required maxlength="40">
                     </div>
                     <div class="form__group">
                         <div class="field-title">Ваш E-mail</div>
@@ -117,7 +117,8 @@
 </div>
 
 <footer>
-    2004 - 2018. Все вправа защищены
+    2004 - 2018. Все вправа защищены.<br><br>
+    Сайт разработан<br><a href="mailto:lenarkaaa12345@gmail.com">Ленаром Сулеймановым</a> 
 </footer>
 
 <script>
