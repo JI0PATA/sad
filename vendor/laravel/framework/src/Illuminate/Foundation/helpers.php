@@ -990,3 +990,14 @@ if (! function_exists('view')) {
         return $factory->make($view, $data, $mergeData);
     }
 }
+
+function createMsg($status, $msg) {
+    if ($status === 0) $class_status = 'alert-danger';
+    else if ($status === 1) $class_status = 'alert-success';
+
+    session()->flash('popup_msg', "
+    <div id='popup_msg' class='{$class_status}'>
+    {$msg}
+</div>
+    ");
+}

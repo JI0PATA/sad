@@ -27,6 +27,11 @@
     <link rel="stylesheet" href="{{ asset('components/lightbox/css/lightbox.css') }}">
 </head>
 <body class="no-transition">
+
+@if(\Session::has('popup_msg'))
+    {!! \Session::get('popup_msg') !!}
+@endif
+
 <header id="hat">
     <input type="checkbox" class="hidden" id="menu_mobile">
     <label class="san-menu" for="menu_mobile">

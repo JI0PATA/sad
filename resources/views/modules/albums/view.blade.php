@@ -16,8 +16,8 @@
             <div class="albums__item">
                 <div class="album__preview">
                     <img src="{{ asset('img/albums/photos/'.$photo['img']) }}" alt="">
-                </div>
-                <a href="{{ route('deletePhoto', ['id' => $photo['id']]) }}">Удалить</a>
+                </div><br>
+                <a href="{{ route('deletePhoto', ['id' => $photo['id']]) }}" class="btn btn-danger">Удалить</a>
             </div>
         @endforeach
     </div>

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="wp">
-        <a href="{{ route('addNews') }}">Добавить новость</a>
+        <a href="{{ route('addNews') }}" class="btn btn-primary">Добавить новость</a>
         @foreach($news as $item)
             <div class="slider__item news">
                 <img src="{{asset('img/news/'.$item['img'])}}" alt="">
@@ -13,8 +13,8 @@
                     {!! $item['description'] !!}
                 </div>
                 <div>
-                    <a href="{{ route('editNews', ['id' => $item['id']]) }}">Редактировать</a>
-                    <a href="{{ route('deleteNews', ['id' => $item['id']]) }}">Удалить</a>
+                    <a href="{{ route('editNews', ['id' => $item['id']]) }}" class="btn btn-primary">Редактировать</a>
+                    <a href="{{ route('deleteNews', ['id' => $item['id']]) }}" class="btn btn-danger">Удалить</a>
                 </div>
             </div>
         @endforeach

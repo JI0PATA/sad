@@ -665,3 +665,50 @@ footer {
 	margin-bottom: 30px;
 }
 /************* /СТРАНИЦА ************/
+
+/************* ВСПЛЫВАЮЩЕЕ СООБЩЕНИЕ *************/
+#popup_msg {
+	position: fixed;
+	z-index: 15;
+	top: 0;
+	font-size: 19px;
+	text-align: center;
+	width: 100%;
+	padding: 10px;
+	border-width: 2px;
+	border-style: solid;
+	animation: showPopupMsg .5s forwards, hiddenPopupMsg .5s 3s forwards;
+}
+
+.alert-danger {
+	border-bottom-color: var(--danger);
+}
+
+.alert-success {
+	border-bottom-color: var(--success);
+}
+
+@keyframes showPopupMsg {
+	0% {
+		transform: translateY(-100%);
+	}
+	50% {
+		transform: translateY(50%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes hiddenPopupMsg {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(50%);
+	}
+	100% {
+		transform: translateY(-100%);
+	}
+}
+/************* /ВСПЛЫВАЮЩЕЕ СООБЩЕНИЕ ************/

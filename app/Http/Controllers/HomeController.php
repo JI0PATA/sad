@@ -38,7 +38,9 @@ class HomeController extends Controller
         $comment = $request->comment;
 
         if ($request->type == 0) {
-            mail('berezka.alk@mail.ru', 'Вопрос от пользователя', "Имя: {$name}\nE-mail: {$email}\n Комментарий: {$comment}");
+            $res = mail('berezka.alk@mail.ru', 'Вопрос от пользователя', "Имя: {$name}\nE-mail: {$email}\n Комментарий: {$comment}");
+            if ($res) createMsg(1, 'Ваш вопрос отправлен! Ожидайте ответа на указанную почту!');
+            else createMsg(0, 'Попробуйте позже!');
         } else {
             $review = new Review;
 
@@ -47,6 +49,8 @@ class HomeController extends Controller
             $review->comment = $comment;
 
             $review->save();
+
+            createMsg(1, 'Ваш отзыв принят! Он будет опубликован на сайте после модерации.');
         }
 
         return back();
@@ -58,6 +62,9 @@ class HomeController extends Controller
         $name = $request->name;
         $call = $request->call;
         $res = mail('berezka.alk@mail.ru', 'Запись на приём', "Дата рождения ребёнка: {$birthdate}\nФИО заявителя: {$name}\nТелефон заявителя: {$call}");
+
+        if ($res) createMsg(1, 'Вы записались на приём, ожидайте, мы Вам перезвоним!');
+        else createMsg(0, 'Попробуйте позже!');
 
         return back();
     }

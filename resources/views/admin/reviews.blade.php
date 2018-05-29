@@ -15,11 +15,12 @@
                 </div>
                 <div>
                     @if($review['active'] === 1)
-                        <a href="{{ route('blockReview', ['id' => $review['id']]) }}">Заблокировать</a>
+                        <a href="{{ route('blockReview', ['id' => $review['id']]) }}" class="btn btn-danger">Заблокировать</a>
                     @else
-                        <a href="{{ route('activeReview', ['id' => $review['id']]) }}">Опубликовать</a>
+                        <a href="{{ route('activeReview', ['id' => $review['id']]) }}" class="btn btn-primary">Опубликовать</a>
                     @endif
-                    <br><a href="{{ route('deleteReview', ['id' => $review['id']]) }}">Удалить</a>
+                    <a href="{{ route('deleteReview', ['id' => $review['id']]) }}"
+                       class="btn btn-danger">Удалить</a>
                 </div>
             </div>
         @endforeach
