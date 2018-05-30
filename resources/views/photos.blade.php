@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+    <br>
     <div class="hor-center wp">
         <h2 class="title">{{ $album['title'] }}</h2>
     </div>

@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-
+    <br>
+    <div class="hor-center">
+        <h1 class="title">галерея</h1>
+    </div>
     <div class="albums__items wp">
         @foreach($albums as $album)
             <a href="{{ route('user.photosInAlbum', ['id' => $album['id']]) }}" class="albums__item">

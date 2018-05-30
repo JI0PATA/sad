@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-
+    <br>
+    <div class="hor-center">
+        <h1 class="title">Воспитатели</h1>
+    </div>
     <div class="mentors wp">
         @foreach($mentors as $mentor)
             <div class="mentor__item">

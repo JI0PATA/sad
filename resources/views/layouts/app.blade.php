@@ -118,7 +118,7 @@
 
 <footer>
     2004 - 2018. Все вправа защищены.<br><br>
-    Сайт разработан<br><a href="mailto:lenarkaaa12345@gmail.com">Ленаром Сулеймановым</a> 
+    Сайт разработан<br><a href="mailto:lenarkaaa12345@gmail.com">Ленаром Сулеймановым</a>
 </footer>
 
 <script>
