@@ -69,23 +69,23 @@
                 {{ csrf_field() }}
                 <div>
                     <div class="form__group">
-                        <div class="field-title">Ф.И.О.</div>
-                        <input type="text" name="name" required maxlength="40">
+                        <div class="field-title">Ф.И.О</div>
+                        <input type="text" placeholder="ФИО" name="name" required pattern="^[А-Яа-яЁё\s]+$" title="ФИО" maxlength="40">
                     </div>
                     <div class="form__group">
                         <div class="field-title">Ваш E-mail</div>
-                        <input type="email" name="email" required>
+                        <input type="email" placeholder="E-mail" name="email" required>
                     </div>
                 </div><br>
                 <div>
                     <div class="form__group">
                         <div>
-                            <select name="type">
+                            <select name="type" title="Тип отзыва">
                                 <option value="0">Вопрос</option>
                                 <option value="1">Отзыв</option>
                             </select>
                         </div><br>
-                        <textarea name="comment" required></textarea>
+                        <textarea name="comment" required title="" placeholder="Комментарий"></textarea>
                     </div>
                     <button>Отправить</button>
                 </div>
@@ -112,8 +112,7 @@
 </section>
 
 <div id="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2430.473243190922!2d49.92804464287778!3d54.90184641167478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415dc2c952f17fa1%3A0x7553286596c4b06!2z0KjQutC-0LvRjNC90LDRjyDRg9C70LjRhtCwLCDQkdCw0LfQsNGA0L3Ri9C1INCc0LDRgtCw0LrQuCwg0KDQtdGB0L8uINCi0LDRgtCw0YDRgdGC0LDQvSwgNDIyODcw!5e0!3m2!1sru!2sru!4v1527497149637"
-            width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa2bc50686eacd793332bcd47fdcc3ab18258b6b0e93502d125c20e3b5c66eff6&amp;source=constructor" width="100%" height="500" frameborder="0"></iframe>
 </div>
 
 <footer>
