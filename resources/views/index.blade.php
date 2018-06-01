@@ -26,7 +26,7 @@
             </div>
             <div class="form__group">
                 <div class="field-title">Ф.И.О. заявителя</div>
-                <input type="text" name="name" pattern="^[А-Яа-яЁё\s]+$" title="ФИО" maxlength="25" required>
+                <input type="text" name="name" pattern="^[А-Яа-яЁё\s]+$" title="ФИО" maxlength="40" required>
             </div>
             <div class="form__group">
                 <div class="field-title">Телефон заявителя</div>

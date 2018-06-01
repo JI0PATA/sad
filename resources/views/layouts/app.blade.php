@@ -70,7 +70,7 @@
                 <div>
                     <div class="form__group">
                         <div class="field-title">Ф.И.О</div>
-                        <input type="text" placeholder="ФИО" name="name" required pattern="^[А-Яа-яЁё\s]+$" title="ФИО" maxlength="40">
+                        <input type="text" placeholder="ФИО" name="name" required pattern="^[А-Яа-яЁё\s]+$" title="ФИО" maxlength="30">
                     </div>
                     <div class="form__group">
                         <div class="field-title">Ваш E-mail</div>
@@ -112,7 +112,7 @@
 </section>
 
 <div id="map">
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa2bc50686eacd793332bcd47fdcc3ab18258b6b0e93502d125c20e3b5c66eff6&amp;source=constructor" width="100%" height="500" frameborder="0"></iframe>
+    <iframe src="https://yandex.ru/map-widget/v1/-/CBqXn8rvHD" width="100%" height="500" frameborder="0" allowfullscreen="true"></iframe>
 </div>
 
 <footer>
