@@ -72,7 +72,7 @@
                 <a href="{{ route('documents') }}" class="btn btn-primary">Документы</a>
             </div>
         </div>
-        <div class="full_item">
+        <div class="full_item" id="news">
             <div class="top">
                 <div class="line"></div>
                 <div class="circle">

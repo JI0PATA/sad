@@ -44,7 +44,7 @@
 
         <a href="/" class="menu__item">главная</a>
         <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#stuff" class="menu__item">о садике</a>
-        <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#stuff" class="menu__item">новости</a>
+        <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#news" class="menu__item">новости</a>
         <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#mentors" class="menu__item">воспитатели</a>
         <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#albums" class="menu__item">галерея</a>
         <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#callback" class="menu__item">отзывы</a>
@@ -112,7 +112,7 @@
 </section>
 
 <div id="map">
-    <iframe src="https://yandex.ru/map-widget/v1/-/CBqXn8rvHD" width="100%" height="500" frameborder="0" allowfullscreen="true"></iframe>
+    <iframe src="https://yandex.ru/map-widget/v1/-/CBqdiOUTcD" width="100%" height="500" frameborder="0" allowfullscreen="true"></iframe>
 </div>
 
 <footer>
