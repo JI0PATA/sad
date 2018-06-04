@@ -1,6 +1,6 @@
 {{ config(['app.name' => 'Детский сад "Березка"']) }}
 
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8">
@@ -70,13 +70,15 @@
                 <div>
                     <div class="form__group">
                         <div class="field-title">Ф.И.О</div>
-                        <input type="text" placeholder="ФИО" name="name" required pattern="^[А-Яа-яЁё\s]+$" title="ФИО" maxlength="30">
+                        <input type="text" placeholder="ФИО" name="name" required pattern="^[А-Яа-яЁё\s]+$" title="ФИО"
+                               maxlength="30">
                     </div>
                     <div class="form__group">
                         <div class="field-title">Ваш E-mail</div>
                         <input type="email" placeholder="E-mail" name="email" required>
                     </div>
-                </div><br>
+                </div>
+                <br>
                 <div>
                     <div class="form__group">
                         <div>
@@ -84,7 +86,8 @@
                                 <option value="0">Вопрос</option>
                                 <option value="1">Отзыв</option>
                             </select>
-                        </div><br>
+                        </div>
+                        <br>
                         <textarea name="comment" required title="" placeholder="Комментарий"></textarea>
                     </div>
                     <button>Отправить</button>
@@ -112,7 +115,8 @@
 </section>
 
 <div id="map">
-    <iframe src="https://yandex.ru/map-widget/v1/-/CBqdiOUTcD" width="100%" height="500" frameborder="0" allowfullscreen="true"></iframe>
+    <iframe src="https://yandex.ru/map-widget/v1/-/CBqdiOUTcD" width="100%" height="500" frameborder="0"
+            allowfullscreen="true"></iframe>
 </div>
 
 <footer>
@@ -136,9 +140,9 @@
         $('#slider').css('height', stHeight + 'px');
 
         $('#menu a').on('click', _ => {
-           if ($('#menu_mobile').prop('checked')) {
-               $('#menu_mobile').prop('checked', false);
-           }
+            if ($('#menu_mobile').prop('checked')) {
+                $('#menu_mobile').prop('checked', false);
+            }
         });
 
         $("a[href^='#']").on("click", function (event) {
@@ -147,6 +151,17 @@
                 top = $(id).offset().top;
             $('body,html').animate({scrollTop: top - 100}, 1500);
         });
+
+        let url = location.href;
+        let anchor = url.substring(url.indexOf("#") + 1);
+
+        if (anchor.length !== 0) {
+            $(document).scrollTop(0);
+            let top = $(`#${anchor}`).offset().top;
+            $('body,html').animate({scrollTop: top - 100}, 1500);
+        }
+
+
     });
 </script>
 </body>
