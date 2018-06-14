@@ -163,4 +163,21 @@
 	#map {
 		margin-top: 0;
 	}
+
+	.mentor__item {
+		text-align: center;
+	}
+
+	.news__item {
+		background-image: none;
+		height: auto;
+	}
+
+	.news__info {
+		flex-direction: column;
+	}
+
+	.news__description {
+		margin-top: 10px;
+	}
 }
