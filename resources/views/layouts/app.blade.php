@@ -43,7 +43,7 @@
         <label for="menu_mobile" class="close">X</label>
 
         <a href="/" class="menu__item">главная</a>
-        <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#stuff" class="menu__item">о садике</a>
+        <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#stuff" class="menu__item">о нас</a>
         <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#news" class="menu__item">новости</a>
         <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#mentors" class="menu__item">воспитатели</a>
         <a href="{{ \Request::route()->getName() !== 'home' ? '/' : '' }}#albums" class="menu__item">галерея</a>
@@ -120,7 +120,7 @@
 </div>
 
 <footer>
-    2017 - 2018. Все вправа защищены.<br><br>
+    2017 - 2018. Все права защищены.<br><br>
     Сайт разработан<br><a href="mailto:lenarkaaa12345@gmail.com">Ленаром Сулеймановым</a>
 </footer>
 

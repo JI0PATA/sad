@@ -6,7 +6,7 @@
         <img src="{{ asset('img/news/'.$news['img']) }}" alt="">
         <div class="form-group">
             <label for="inputEmail">Картинка</label>
-            <input type="file" class="form-control" placeholder="Введите email" name="file" required>
+            <input type="file" class="form-control" placeholder="Введите email" name="file">
         </div>
         <div class="form-group">
             <label for="inputPassword">Заголовок</label>
@@ -16,6 +16,6 @@
             <label for="inputPassword">Описание</label>
             <textarea name="description" id="textarea">{{ $news['description'] }}</textarea>
         </div>
-        <button type="submit" class="btn btn-dark">Добавить</button>
+        <button type="submit" class="btn btn-dark">Сохранить</button>
     </form>
 @endsection
